@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  padding: 5px;
+  max-width: 960px;
+  width: 95%;
+  margin: 20px auto;
+}
+
+h1 {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first,
+.second,
+.third {
+  border: 3px solid black;
+  margin-bottom: 15px;
+  margin: 15px;
+}
+
+.section {
+  background-color: lightgrey;
+  float: left;
+}
+
+h4 {
+  float: right;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.chicken {
+  background-color: pink;
+}
+
+.beef {
+  background-color: rgb(224, 85, 85);
+  color: white;
+}
+
+.sushi {
+  background-color: rgb(245, 236, 111);
+}
+
+/*large devices*/
+@media screen and (min-width: 1200px) {
+  .section {
+    width: 33%;
+  }
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (min-width: 992px) {
+  .first,
+  .second,
+  .third {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .first,
+  .second {
+    width: 45%;
+  }
+  .third {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .first,
+  .second,
+  .third {
+    width: 100%;
+  }
+}
